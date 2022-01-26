@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+#page-head {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 25px;
+  color: grey;
+}
+#contacts-list-container ul {
+  padding: 0;
+  list-style: none;
+}
+.contact {
+  padding: 3px 10px;
+  border: 1px solid white;
+  background-color: #6f92f9;
+  box-shadow: 1px 1px 1px 1px lightgray;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact .details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact .delete-button {
+  width: 10%;
+  padding: 3px;
+  text-align: center;
+  margin-top: 5px;
+}
+.contact .delete-button a {
+  color: white;
+  background-color: red;
+  text-align: center;
+}
+/* added style to form button */
+#submit-buttons {
+  color: red;
+  background-color: royalblue;
+  height: 30px;
+  width: 50px;
+}
+/* added new class for fixing the width */
+.name-class {
+  width: 15px;
+  
+}
+#new-contact-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  
+}
+.input-style{
+  border-width:1px;
+  border:none;
+  border-bottom: 1px solid black;
+  margin-left: 29px;
+
+}

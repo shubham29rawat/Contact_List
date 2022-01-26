@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <link rel="stylesheet" href="/css/home.css">
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+        crossorigin="anonymous"
+      />
+    </head>
+    <body>
+        <h1 id="page-head"><i class="fas fa-address-book"> </i>
+            Contact list </h1>
+        <div id="contacts-list-container">
+            <ul>
+                <% for (let i of contacts_list) { %>
+                    <li class="contact">
+                        <div class="details">
+                            <!-- added new class name-class -->
+                        <p class="name-class"><%= i.name %></p>
+                        <p class="name-class"><%= i.phone %></p>
+
+                        <div class="delete-button">
+                            <a href="/delete-contact/<%= i.phone%>"><i class=" fas fa-window-close"></i></a>
+                                <!-- <i class=" fas fa-window-close"></i>  --> <!-- this icon should be in a tag -->
+                            </a>
+                        </div>
+                    </div>
+                    </li>
+                    
+                    <% } %>
+            </ul>
+        </div>
+        <form id="new-contact-form" action="/create-contact" method="POST">
+            <input class="input-style" type="text" name="name" placeholder="enter name" required>
+            <input class="input-style" type="number" name="phone" placeholder="enter phone" required>
+            <!-- added id for adding the syle to the buttons -->
+            <button id="submit-buttons" type="submit"> Add </button>
+
+        </form>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
